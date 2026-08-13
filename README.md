@@ -1,16 +1,56 @@
-# React + Vite
+Name: Harman Singh    Uid:24BCF10046      Section: 24BCF-1(A)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Calendar4 — React + Vite Calendar & Posts Demo
 
-Currently, two official plugins are available:
+## Project Overview
+This is a small React application scaffolded with Vite that demonstrates a calendar view and a simple posts UI. It uses React, Redux Toolkit, and axios for data fetching. The app is intended as a learning/demo project showing how to combine a calendar component with a posts list and API integration.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## How it works
+- The app is built with Vite and React (entry: `main.jsx`).
+- `src/components/calendar.jsx` renders the calendar UI (uses `react-big-calendar` and `date-fns`).
+- `src/components/postCard.jsx` renders individual post items.
+- `src/Api/postApi.js` contains API calls (uses `axios`).
+- `src/features/posts/postSlice.jsx` contains Redux Toolkit logic for posts state.
+- Routing and pages live under `src/pages/` (main page: `Home.jsx`).
 
-## React Compiler
+## Start (Development)
+Prerequisites: Node.js (recommended >= 16) and npm.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+1. Install dependencies:
 
-## Expanding the ESLint configuration
+	npm install
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+2. Start the dev server:
+
+	npm run dev
+
+3. Open the app in your browser at http://localhost:5173
+
+Available scripts (from `package.json`):
+- `npm run dev` — start Vite dev server
+- `npm run build` — build for production
+- `npm run preview` — preview the production build
+- `npm run lint` — run ESLint
+
+To run tests (Vitest is installed but no npm script):
+
+	npx vitest
+
+## Usage / What you can do with this project
+- View and interact with the calendar UI to inspect dates and events.
+- Browse, create (if wired to an API), and inspect posts rendered via `postCard.jsx`.
+- Use this as a starter template to add event persistence, authentication, or a backend.
+
+## Project Structure (important files)
+- `src/components/calendar.jsx` — calendar component
+- `src/components/postCard.jsx` — post display card
+- `src/Api/postApi.js` — API helper functions
+- `src/features/posts/postSlice.jsx` — Redux slice for posts
+- `src/pages/Home.jsx` — main page that composes components
+
+## Notes
+- Tests are in `src/tests/` and `tests/` — run with `npx vitest`.
+- If you want a `test` npm script, add: `"test": "vitest"` to `package.json`.
+
+---
+Name: Harman    Section: 24BCF-1(A)    Rollno: 24BCF10046
